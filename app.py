@@ -17,12 +17,12 @@ conn = psycopg2.connect(
 # Streamlit config
 st.set_page_config(page_title="Crypto Analytics", layout="wide")
 
-# Header layout
-col_logo, col_title = st.columns([1, 8])
+col_logo, col_spacer, col_title = st.columns([1, 0.3, 8])
 with col_logo:
-    st.image("dbt_logo.jpg", width=300)
+    st.image("dbt_logo.jpg", width=180)
 with col_title:
-    st.title("\U0001F680 dbt-Powered Crypto Data Dashboard")
+    st.title("🚀 dbt-Powered Crypto Data Dashboard")
+
 
 # Tabs
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
