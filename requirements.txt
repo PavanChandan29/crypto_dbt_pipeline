@@ -1,0 +1,14 @@
+# Core
+pandas
+requests
+sqlalchemy
+psycopg2-binary
+python-dotenv
+plotly
+
+# Streamlit for optional dashboarding
+streamlit
+
+# dbt for data modeling and transformation
+dbt-core
+dbt-postgres

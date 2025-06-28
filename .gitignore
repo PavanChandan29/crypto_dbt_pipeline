@@ -1,0 +1,26 @@
+# Python virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Environment variables (API keys, passwords, etc.)
+.env
+
+# VSCode settings
+.vscode/
+
+# dbt build artifacts
+crypto_dbt_project/target/
+crypto_dbt_project/dbt_modules/
+crypto_dbt_project/logs/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Streamlit file cache
+.streamlit/
+
+# MacOS hidden files
+.DS_Store

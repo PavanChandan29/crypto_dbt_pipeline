@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: crypto_top10
+    description: "Top 10 cryptocurrencies by market cap"
+    columns:
+      - name: market_cap
+        tests:
+          - not_null
+
+      - name: symbol
+        tests:
+          - accepted_values:
+              values: ['BTC', 'ETH', 'SOL', 'AVAX', 'USDT', 'USDC', 'XRP', 'BNB', 'ADA', 'DOGE']
+
+  - name: track_main_tokens
+    description: "Main tokens of interest"
+    columns:
+      - name: symbol
+        tests:
+          - accepted_values:
+              values: ['BTC', 'ETH', 'SOL', 'AVAX']
