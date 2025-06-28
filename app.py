@@ -65,6 +65,12 @@ with tab1:
     )
     fig.update_xaxes(showgrid=False)
     fig.update_yaxes(showgrid=False)
+    fig.update_yaxes(
+    type="log",
+    tickvals=[10, 100, 1000, 2000],
+    ticktext=["$10B", "$100B", "$1T", "$2T"]
+)
+
 
     st.plotly_chart(fig, use_container_width=False)
 
