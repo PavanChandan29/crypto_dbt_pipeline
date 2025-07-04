@@ -5,14 +5,16 @@ import subprocess
 import plotly.express as px
 import plotly.graph_objects as go
 
-# PostgreSQL connection
-conn = psycopg2.connect(
-    dbname="crypto_data",
-    user="postgres",
-    password="12345678",  # Replace with your actual password
-    host="localhost",
-    port="5432"
-)
+import os
+from dotenv import load_dotenv
+from sqlalchemy import create_engine
+
+# Load .env file and create engine
+load_dotenv()
+db_url = os.getenv("DB_URL")
+engine = create_engine(db_url)
+
+
 
 # Streamlit config
 st.set_page_config(page_title="Crypto Analytics", layout="wide")
@@ -33,7 +35,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
 with tab1:
     st.subheader("\U0001F4CA Top 10 Cryptocurrencies by Market Cap")
 
-    top10_df = pd.read_sql("SELECT * FROM crypto_top10", conn)
+    top10_df = pd.read_sql("SELECT * FROM crypto_top10", engine)
     top10_df["market_cap_b"] = top10_df["market_cap"] / 1e9
 
     concise_df = top10_df[["symbol", "price_usd", "market_cap_b"]].copy()
@@ -91,7 +93,7 @@ with tab1:
 # --- TAB 2 ---
 with tab2:
     st.subheader("\U0001F3AF Tracked Tokens (AVAX, ETH, BTC, SOL)")
-    tracked_df = pd.read_sql("SELECT * FROM track_main_tokens", conn)
+    tracked_df = pd.read_sql("SELECT * FROM track_main_tokens", engine)
     st.dataframe(tracked_df, use_container_width=True)
 
 # --- TAB 3 ---
@@ -103,7 +105,7 @@ with tab3:
         WHERE table_schema = 'public'
           AND table_catalog = 'crypto_data'
         ORDER BY table_type, table_name;
-    """, conn)
+    """, engine)
     st.dataframe(db_objects, use_container_width=True)
 
 # --- TAB 4 ---
@@ -146,5 +148,3 @@ with tab5:
     </div>
     """, unsafe_allow_html=True)
 
-# Close DB connection
-conn.close()

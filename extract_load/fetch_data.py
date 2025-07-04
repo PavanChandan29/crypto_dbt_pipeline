@@ -34,7 +34,10 @@ df = pd.json_normalize(data)
 
 #Set up database connection
 
-engine = create_engine ("postgresql://postgres:12345678@localhost:5432/crypto_data")
+load_dotenv()  # (already present)
+db_url = os.getenv("DB_URL")
+engine = create_engine(db_url)
+
 
 #load data into PostGres
 df.to_sql("crypto_raw", engine, if_exists="replace", index = False)
