@@ -33,7 +33,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
 
 # --- TAB 1 ---
 with tab1:
-    st.subheader("\U0001F4CA Top 10 Cryptocurrencies by Market Cap")
+    st.subheader("📊 Top 10 Cryptocurrencies by Market Cap")
 
     top10_df = pd.read_sql("SELECT * FROM crypto_top10", engine)
     top10_df["market_cap_b"] = top10_df["market_cap"] / 1e9
@@ -41,42 +41,47 @@ with tab1:
     concise_df = top10_df[["symbol", "price_usd", "market_cap_b"]].copy()
     concise_df.columns = ["Symbol", "Price (USD)", "Market Cap (B)"]
 
-    st.dataframe(concise_df, use_container_width=False)
+    # Layout: Table (1/4) and Bar Chart (3/4)
+    col1, col2 = st.columns([1, 3])
 
-    st.markdown("### \U0001F4C9 Log Scale Bar Chart")
-    colors = [
-        "#76C7C0", "#F4C542", "#F49E42", "#DDA0DD", "#90EE90",
-        "#87CEFA", "#FF69B4", "#C5E384", "#77DD77", "#B39EB5"
-    ]
-    fig = go.Figure()
-    fig.add_trace(go.Bar(
-        x=concise_df["Symbol"],
-        y=concise_df["Market Cap (B)"],
-        text=[f"${val:,.1f}B" for val in concise_df["Market Cap (B)"]],
-        textposition="auto",
-        marker_color=colors
-    ))
-    fig.update_layout(
-        yaxis_type="log",
-        xaxis_title="<b>Token</b>",
-        yaxis_title="<b>Market Cap (B)</b>",
-        height=450,
-        margin=dict(l=40, r=40, t=40, b=40),
-        plot_bgcolor="rgba(0,0,0,0)",
-        font=dict(family="Arial", size=12, color="white")
-    )
-    fig.update_xaxes(showgrid=False)
-    fig.update_yaxes(showgrid=False)
-    fig.update_yaxes(
-    type="log",
-    tickvals=[10, 100, 1000, 2000],
-    ticktext=["$10B", "$100B", "$1T", "$2T"]
-)
+    with col1:
+        st.markdown("### 📋 Data Table")
+        st.dataframe(concise_df, use_container_width=True)
 
+    with col2:
+        st.markdown("### 📉 Log Scale Bar Chart")
+        colors = [
+            "#76C7C0", "#F4C542", "#F49E42", "#DDA0DD", "#90EE90",
+            "#87CEFA", "#FF69B4", "#C5E384", "#77DD77", "#B39EB5"
+        ]
+        fig = go.Figure()
+        fig.add_trace(go.Bar(
+            x=concise_df["Symbol"],
+            y=concise_df["Market Cap (B)"],
+            text=[f"${val:,.1f}B" for val in concise_df["Market Cap (B)"]],
+            textposition="auto",
+            marker_color=colors
+        ))
+        fig.update_layout(
+            yaxis_type="log",
+            xaxis_title="<b>Token</b>",
+            yaxis_title="<b>Market Cap (B)</b>",
+            height=450,
+            margin=dict(l=40, r=40, t=40, b=40),
+            plot_bgcolor="rgba(0,0,0,0)",
+            font=dict(family="Arial", size=12, color="white")
+        )
+        fig.update_xaxes(showgrid=False)
+        fig.update_yaxes(showgrid=False)
+        fig.update_yaxes(
+            type="log",
+            tickvals=[10, 100, 1000, 2000],
+            ticktext=["$10B", "$100B", "$1T", "$2T"]
+        )
+        st.plotly_chart(fig, use_container_width=True)
 
-    st.plotly_chart(fig, use_container_width=False)
-
-    st.markdown("### \U0001F967 Market Share Pie Chart")
+    # Below both: Pie Chart
+    st.markdown("### 🥧 Market Share Pie Chart")
     pie_fig = px.pie(
         concise_df,
         names="Symbol",
@@ -88,7 +93,8 @@ with tab1:
         margin=dict(l=40, r=40, t=40, b=40),
         font=dict(family="Arial", size=12, color="white")
     )
-    st.plotly_chart(pie_fig, use_container_width=False)
+    st.plotly_chart(pie_fig, use_container_width=True)
+
 
 # --- TAB 2 ---
 with tab2:
