@@ -1,12 +1,14 @@
 import requests
 import pandas as pd
 import os
+import streamlit as st
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
 
 #Load API key
-load_dotenv()
-api_key = os.getenv("CMC_API_KEY")
+db_url = st.secrets["DB_URL"]
+api_key = st.secrets["CMC_API_KEY"]
+
 
 
 headers = {

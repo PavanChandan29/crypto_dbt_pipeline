@@ -10,8 +10,11 @@ from dotenv import load_dotenv
 from sqlalchemy import create_engine
 
 # Load .env file and create engine
-load_dotenv()
-db_url = os.getenv("DB_URL")
+# load_dotenv()
+# db_url = os.getenv("DB_URL")
+
+db_url = st.secrets["DB_URL"]
+
 engine = create_engine(db_url)
 
 
