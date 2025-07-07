@@ -585,3 +585,93 @@ Runtime Error
 [0m17:55:35.522139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015AF7FA9C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015AFD4E7350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015AFE8E3F50>]}
 [0m17:55:35.524145 [debug] [MainThread]: Flushing usage events
 [0m17:55:35.840658 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:56:13.663930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014D32086C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014D32086D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014D354C7690>]}
+
+
+============================== 15:56:13.673134 | 5314f606-9673-4204-88f7-6f487c455e2b ==============================
+[0m15:56:13.673134 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:56:13.674143 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\aasha\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt test --select crypto_top10 track_main_tokens', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:56:13.676120 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\aasha\OneDrive\Desktop\Secondary\Portfolio\Cursor\crypto_pipeline_project_dbt\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:56:13.677121 [debug] [MainThread]: Command `dbt test` failed at 15:56:13.677121 after 0.13 seconds
+[0m15:56:13.678133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014D2E7B83D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014D354C6A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014D354C5190>]}
+[0m15:56:13.679131 [debug] [MainThread]: Flushing usage events
+[0m15:56:14.047736 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:20:00.391107 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E35E4550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E359D4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E359D8D0>]}
+
+
+============================== 16:20:00.397662 | 8109c603-5374-4191-a0ea-c4fe6afdef12 ==============================
+[0m16:20:00.397662 [info ] [MainThread]: Running with dbt=1.10.3
+[0m16:20:00.393631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BDB2E4D2D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BDB2E4F250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BDB2E4FA50>]}
+
+
+============================== 16:20:00.399094 | 5b941287-6698-4b75-9678-7a7941d66a07 ==============================
+[0m16:20:00.399094 [info ] [MainThread]: Running with dbt=1.10.3
+[0m16:20:00.400376 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\aasha\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt test --select accepted_values_crypto_top10_symbol', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:20:00.401348 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\aasha\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt test --select accepted_values_crypto_top10_symbol', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:20:00.402618 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\aasha\OneDrive\Desktop\Secondary\Portfolio\Cursor\crypto_pipeline_project_dbt\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m16:20:00.402618 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\aasha\OneDrive\Desktop\Secondary\Portfolio\Cursor\crypto_pipeline_project_dbt\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m16:20:00.404838 [debug] [MainThread]: Command `dbt test` failed at 16:20:00.404838 after 0.12 seconds
+[0m16:20:00.405839 [debug] [MainThread]: Command `dbt test` failed at 16:20:00.404838 after 0.15 seconds
+[0m16:20:00.405839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207DCC09950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E35E47D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E359F7D0>]}
+[0m16:20:00.406836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BDAC499950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BDB2E4D7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BDB2E4C550>]}
+[0m16:20:00.407848 [debug] [MainThread]: Flushing usage events
+[0m16:20:00.407848 [debug] [MainThread]: Flushing usage events
+[0m16:20:00.779951 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:20:00.779951 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:57:12.907333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8B713CD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8B713DF10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8B713D890>]}
+
+
+============================== 19:57:12.916539 | b9c9659e-d82f-474a-9e36-2af987510ead ==============================
+[0m19:57:12.916539 [info ] [MainThread]: Running with dbt=1.10.3
+[0m19:57:12.917530 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\aasha\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt docs serve', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:57:12.919547 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\aasha\OneDrive\Desktop\Secondary\Portfolio\Cursor\crypto_pipeline_project_dbt\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m19:57:12.921532 [debug] [MainThread]: Command `dbt docs serve` failed at 19:57:12.921532 after 0.12 seconds
+[0m19:57:12.922540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8B70DC0D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8B7133150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8B70CCDD0>]}
+[0m19:57:12.923531 [debug] [MainThread]: Flushing usage events
+[0m19:57:13.274644 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:07:26.406705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A0A11CDD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A0A11D9D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A0A11C910>]}
+
+
+============================== 20:07:26.415194 | 149e1b3a-dba9-44e8-be9c-8fd9d9bb732b ==============================
+[0m20:07:26.415194 [info ] [MainThread]: Running with dbt=1.10.3
+[0m20:07:26.416956 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\aasha\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt test --select crypto_top10 track_main_tokens', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:07:26.408481 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002149071A150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021493AE9A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021493D8FE10>]}
+[0m20:07:26.416956 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\aasha\OneDrive\Desktop\Secondary\Portfolio\Cursor\crypto_pipeline_project_dbt\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+
+
+============================== 20:07:26.416956 | 4c68bd9e-8250-4012-9416-b26463767503 ==============================
+[0m20:07:26.416956 [info ] [MainThread]: Running with dbt=1.10.3
+[0m20:07:26.416956 [debug] [MainThread]: Command `dbt test` failed at 20:07:26.416956 after 0.14 seconds
+[0m20:07:26.421867 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\aasha\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt test --select crypto_top10 track_main_tokens', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:07:26.421867 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A0A10D210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A06AFA950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A03749B90>]}
+[0m20:07:26.421867 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\aasha\OneDrive\Desktop\Secondary\Portfolio\Cursor\crypto_pipeline_project_dbt\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:07:26.421867 [debug] [MainThread]: Flushing usage events
+[0m20:07:26.423986 [debug] [MainThread]: Command `dbt test` failed at 20:07:26.423986 after 0.14 seconds
+[0m20:07:26.426002 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021493D2D450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021493DB9C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021493DBBFD0>]}
+[0m20:07:26.426002 [debug] [MainThread]: Flushing usage events
+[0m20:07:26.779559 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:07:26.783194 [debug] [MainThread]: An error was encountered while trying to flush usage events

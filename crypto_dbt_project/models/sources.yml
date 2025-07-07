@@ -2,6 +2,35 @@ version: 2
 
 sources:
   - name: crypto_data
+    description: "Raw cryptocurrency data from CoinMarketCap API"
     schema: public
     tables:
       - name: crypto_raw
+        description: "Raw cryptocurrency data including prices, market cap, and rankings"
+        columns:
+          - name: name
+            description: "Full name of the cryptocurrency"
+          - name: symbol
+            description: "Trading symbol (e.g., BTC, ETH)"
+          - name: cmc_rank
+            description: "CoinMarketCap ranking by market cap"
+          - name: "quote.USD.price"
+            description: "Current price in USD"
+          - name: "quote.USD.market_cap"
+            description: "Market capitalization in USD"
+          - name: "quote.USD.volume_24h"
+            description: "24-hour trading volume in USD"
+          - name: "quote.USD.percent_change_1h"
+            description: "1-hour price change percentage"
+          - name: "quote.USD.percent_change_24h"
+            description: "24-hour price change percentage"
+          - name: "quote.USD.percent_change_7d"
+            description: "7-day price change percentage"
+          - name: circulating_supply
+            description: "Number of coins currently in circulation"
+          - name: total_supply
+            description: "Total number of coins created"
+          - name: max_supply
+            description: "Maximum number of coins possible"
+          - name: last_updated
+            description: "Timestamp of last data update"

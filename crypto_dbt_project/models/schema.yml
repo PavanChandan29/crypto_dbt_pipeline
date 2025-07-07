@@ -2,21 +2,61 @@ version: 2
 
 models:
   - name: crypto_top10
-    description: "Top 10 cryptocurrencies by market cap"
+    description: "Top 10 cryptocurrencies by market cap - filtered from CoinMarketCap API data"
     columns:
-      - name: market_cap
+      - name: name
+        description: "Full name of the cryptocurrency (e.g., Bitcoin, Ethereum)"
         tests:
           - not_null
 
       - name: symbol
+        description: "Trading symbol for the cryptocurrency (e.g., BTC, ETH)"
         tests:
+          - not_null
           - accepted_values:
               values: ['BTC', 'ETH', 'SOL', 'AVAX', 'USDT', 'USDC', 'XRP', 'BNB', 'ADA', 'DOGE']
 
+      - name: cmc_rank
+        description: "CoinMarketCap ranking by market capitalization (1 = highest market cap)"
+        tests:
+          - not_null
+
+      - name: price_usd
+        description: "Current price per coin in USD"
+        tests:
+          - not_null
+
+      - name: market_cap
+        description: "Total market capitalization in USD (price × circulating supply)"
+        tests:
+          - not_null
+
   - name: track_main_tokens
-    description: "Main tokens of interest"
+    description: "Curated list of main cryptocurrencies for focused tracking and analysis"
     columns:
       - name: symbol
+        description: "Trading symbol for the cryptocurrency"
         tests:
+          - not_null
           - accepted_values:
               values: ['BTC', 'ETH', 'SOL', 'AVAX']
+
+      - name: name
+        description: "Full name of the cryptocurrency"
+        tests:
+          - not_null
+
+      - name: cmc_rank
+        description: "CoinMarketCap ranking by market capitalization"
+        tests:
+          - not_null
+
+      - name: price_usd
+        description: "Current price per coin in USD"
+        tests:
+          - not_null
+
+      - name: market_cap
+        description: "Total market capitalization in USD"
+        tests:
+          - not_null
