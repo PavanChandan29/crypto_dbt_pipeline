@@ -1,58 +1,33 @@
-<<<<<<< HEAD
-# 🚀 dbt-Powered Crypto Data Dashboard
+# 🚀 Crypto DBT Pipeline
 
-A fully integrated crypto analytics dashboard powered by **dbt**, **PostgreSQL**, and **Streamlit**. This project demonstrates how raw API data can be transformed into reliable insights using modern data stack principles.
-
-![Dashboard Preview](dbt_logo.jpg)
+This project is inspired by and adapted from [Aashay Bharadwaj's excellent crypto_pipeline_project_dbt](https://github.com/AashayBharadwaj/crypto_pipeline_project_dbt).  
+Special thanks to Aashay for making his code and design open-source and providing the foundation for this work.
 
 ---
 
-## 📌 Project Overview
+## About This Project
 
-This project includes the full data lifecycle:
-- **Extract**: Crypto data fetched via API (e.g., CoinMarketCap)
-- **Load**: Data loaded into PostgreSQL using `pandas.to_sql()`
-- **Transform**: Cleaned and modeled using **dbt**
-- **Test**: Data validated using built-in **dbt tests**
-- **Visualize**: Front-end dashboard built with **Streamlit**
-
----
-
-## 📊 Dashboard Features
-
-- **Top 10 Cryptocurrencies** by market cap (log scale bar chart + pie chart)
-- **Tracked Tokens View**: Detailed table for AVAX, BTC, ETH, SOL
-- **Database Explorer**: List of available tables and views
-- **Test Results Viewer**: Run and display dbt test output inside UI
-- **Data Flow Tab**: Visual representation of the pipeline steps
+**crypto_dbt_pipeline** is a crypto analytics pipeline that demonstrates the end-to-end workflow:
+- **Extract:** Fetches cryptocurrency data from public APIs (e.g., CoinMarketCap).
+- **Load:** Loads the data into a PostgreSQL database.
+- **Transform:** Cleans and models data using [dbt](https://www.getdbt.com/).
+- **Test:** Validates with built-in dbt tests.
+- **Visualize:** Presents insights and data health in a Streamlit dashboard.
 
 ---
 
-## 🧱 Technologies Used
+## Technologies Used
 
-| Layer         | Tool            |
-|---------------|------------------|
-| **ETL**        | Python (pandas, requests) |
-| **Database**   | PostgreSQL       |
-| **Transform**  | dbt              |
-| **Testing**    | dbt tests        |
-| **Dashboard**  | Streamlit + Plotly |
+- **ETL:** Python (`requests`, `pandas`)
+- **Database:** PostgreSQL (Supabase)
+- **Data Modeling:** dbt
+- **Testing:** dbt tests
+- **Visualization:** Streamlit + Plotly
 
 ---
 
-## 🧪 Data Tests Implemented
+## Attribution
 
-- `not_null` on `market_cap`
-- `accepted_values` on `symbol` fields (for tracked tokens and top 10)
+Parts of the data pipeline, model structure, and dashboard design are based on  
+[Aashay Bharadwaj's crypto_pipeline_project_dbt](https://github.com/AashayBharadwaj/crypto_pipeline_project_dbt).
 
----
-
-## 🚀 Getting Started
-
-### 1. Clone this Repo
-```bash
-git clone https://github.com/AashayBharadwaj/crypto_pipeline_project_dbt.git
-cd crypto_pipeline_project_dbt
-=======
-# crypto_dbt_pipeline
->>>>>>> 367abac6fc72a7ef2243c690f64c5291785c89b6
