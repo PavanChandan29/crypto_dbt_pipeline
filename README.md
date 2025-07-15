@@ -1,6 +1,6 @@
 # 🚀 Crypto DBT Pipeline
 
-This project is inspired by and adapted from [Aashay Bharadwaj's excellent crypto_pipeline_project_dbt](https://github.com/AashayBharadwaj/crypto_pipeline_project_dbt).  
+This project is inspired by and adapted from [Aashay Bharadwaj's crypto_pipeline_project_dbt](https://github.com/AashayBharadwaj/crypto_pipeline_project_dbt).  
 Special thanks to Aashay for making his code and design open-source and providing the foundation for this work.
 
 ---
