@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 dbt-Powered Crypto Data Dashboard
 
 A fully integrated crypto analytics dashboard powered by **dbt**, **PostgreSQL**, and **Streamlit**. This project demonstrates how raw API data can be transformed into reliable insights using modern data stack principles.
@@ -52,3 +53,6 @@ This project includes the full data lifecycle:
 ```bash
 git clone https://github.com/AashayBharadwaj/crypto_pipeline_project_dbt.git
 cd crypto_pipeline_project_dbt
+=======
+# crypto_dbt_pipeline
+>>>>>>> 367abac6fc72a7ef2243c690f64c5291785c89b6
